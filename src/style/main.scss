@@ -1,0 +1,463 @@
+// THIS IS THE MAIN CONTAINER STYLING
+body {
+  background-color: $bg-color;
+  color: $white;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.root {
+  height: 100%;
+}
+
+.container {
+  padding: 0 10px;
+  max-width: 1200px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+}
+
+
+// LEFT NAV STYLING
+.left-nav {
+  flex: 0 1 15%;
+  width: 15%;
+  max-width: 15%;
+  height: calc(100vh - 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid $white-transparent-05;
+  padding: 0 30px 0 0;
+  margin-top: 20px;
+  overflow: auto;
+
+  &__top {
+    justify-self: flex-start;
+
+    &--header {
+      font-size: 30px;
+      font-weight: 500;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    &--items {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--item {
+      text-align: left;
+      font-size: 16px;
+      width: 100%;
+      background-color: $bg-color;
+      color: $white;
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 20px;
+      border-radius: 100px;
+      border: none;
+      outline: none;
+      transition: linear background-color .2s;
+      cursor: pointer;
+
+      &:hover, &:focus, &:active, &.active {
+        background-color: $white-transparent-1;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 2px;
+      }
+    }
+
+    &--icon {
+      color: $white-transparent-25;
+    }
+  }
+
+  &__center {
+    font-size: 12px;
+    align-self: center;
+    background-color: $white-transparent-1;
+    padding: 30px 15px;
+    margin-top: 20px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+    &--description {
+      display: flex;
+      flex-direction: column;
+      color: $white-transparent-7;
+      text-align: center;
+
+      .metallica-hand-sign {
+        width: 40px;
+        height: auto;
+        margin: auto;
+      }
+
+      p {
+        margin: 20px 0;
+      }
+
+      strong {
+        color: $white;
+        font-weight: normal;
+      }
+    }
+  }
+
+  &__bottom {
+    width: 100%;
+    align-self: flex-end;
+    padding-bottom: 20px;
+
+    &--items {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--item {
+      text-align: right;
+      font-size: 16px;
+      width: 100%;
+      background-color: $bg-color;
+      color: $white;
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      border-radius: 100px;
+      border: none;
+      outline: none;
+      transition: linear background-color .2s;
+      cursor: pointer;
+
+      &:hover, &:focus, &:active, &.active {
+        background-color: $white-transparent-1;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 3px;
+      }
+    }
+
+    &--icon {
+      color: $white-transparent-25;
+      margin-right: 10px;
+    }
+  }
+}
+
+
+// MAIN CONTENT STYLING
+.main {
+  flex: 0 1 55%;
+  width: 55%;
+  max-width: 55%;
+  height: calc(100vh - 20px);
+  margin-top: 20px;
+  overflow: auto;
+  padding: 0 30px;
+
+  // PROFILE STYLING
+  .profile {
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .profile-images {
+      width: 100%;
+      position: relative;
+    }
+
+    .profile-banner {
+      flex: 0 1 100%;
+      width: 100%;
+      max-width: 100%;
+      height: 150px;
+      object-fit: cover;
+      object-position: center 30%;
+      border-radius: 20px 20px 0 0;
+    }
+
+    .profile-picture {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      bottom: -75px;
+      left: 20px;
+      border-radius: 50%;
+      border: 4px solid $bg-color;
+    }
+
+    .profile-name {
+      font-size: 25px;
+      font-weight: 900;
+      height: fit-content;
+      color: $white;
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      margin-left: 195px
+    }
+
+    button {
+      margin-left: auto;
+      align-self: center;
+    }
+  }
+
+  // PROFILE NAV STYLING
+  .profile-nav {
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 50px;
+
+    .profile-nav-item {
+      font-weight: 500;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: $white-transparent-5;
+      border-radius: 20px;
+      padding: 5px 10px;
+      cursor: pointer;
+      transition: linear all .2s;
+
+      &:hover, &:active, &:focus, &.active {
+        background-color: $white;
+        color: $black-light;
+      }
+
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  // PROFILE FEATURED STYLING
+  .profile-featured {
+    background-color: $blue-dark;
+    padding: 30px;
+    border-radius: 20px;
+
+    &__heading {
+      font-size: 20px;
+      font-weight: 700;
+      color: $white;
+      margin-bottom: 20px;
+    }
+
+    &__items {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px;
+      align-items: stretch;
+    }
+
+    &__item {
+      width: 100%;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+  }
+
+  .profile-collectibles {
+    padding: 20px;
+
+    &__heading {
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      p {
+        font-size: 20px;
+      }
+    }
+
+    &__items {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px;
+      align-items: stretch;
+    }
+
+    &__item {
+      width: 100%;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+  }
+}
+
+.right-nav {
+  flex: 0 1 30%;
+  width: 30%;
+  max-width: 30%;
+  height: calc(100vh - 20px);
+  overflow: auto;
+  padding-left: 30px;
+  padding-top: 20px;
+  margin-top: 20px;
+  border-left: 1px solid $white-transparent-05;
+
+  .search-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+
+    .search {
+      width: calc(100% - 45px);
+      border-radius: 20px;
+      background-color: $white-transparent-2;
+      padding: 10px 15px;
+      padding-right: 30px;
+      border: none;
+      outline: none;
+
+      &::placeholder {
+        color: $white-transparent-7;
+      }
+    }
+
+    .search-icon {
+      color: $white-transparent-7;
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      width: 15px;
+      height: 15px;
+      transform: translateY(-50%);
+    }
+  }
+
+  .people-to-follow {
+    &__heading {
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    &__items {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      border-radius: 20px;
+      background-color: $white-transparent-05;
+      cursor: pointer;
+
+      &:hover, &:focus, &:active, &.active {
+        background-color: $white-transparent-1;
+
+        .people-to-follow__item--icon {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      &--image {
+        height: 40px;
+        border-radius: 50%;
+      }
+
+      &--name {
+        margin-left: 5px;
+        color: $white;
+      }
+
+      &--icon {
+        font-weight: 500;
+        visibility: hidden;
+        opacity: 0;
+        margin-left: auto;
+        padding: 10px;
+        background-color: $button-primary-color;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  .activity {
+    &__heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+
+      p {
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+
+    &__items {
+      font-size: 13px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+
+      &--wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-left: 10px;
+      }
+
+      &--image {
+        height: 50px;
+        border-radius: 50%;
+      }
+
+      &--name {
+        font-weight: 900;
+      }
+
+      &--type {
+        font-weight: normal;
+        margin-left: 3px;
+      }
+
+      &--time {
+        flex: 0 1 100%;
+        width: 100%;
+        max-width: 100%;
+        margin-top: 5px;
+        color: $white-transparent-5;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.verified {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: $verified-color;
+  color: $white;
+  padding: 5px;
+  margin-left: 10px;
+}

@@ -1,0 +1,45 @@
+.button {
+  outline: none;
+  border: none;
+  background: transparent;
+  color: $white;
+  padding: 10px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: linear all .2s;
+
+  &.button-primary {
+    background-color: $button-primary-color;
+    color: $white;
+
+    &:hover, &:focus, &:active, &.active {
+      background-color: $button-primary-color-active;
+    }
+  }
+
+  &.button-secondary {
+    background-color: transparent;
+    border: 1px solid $white-transparent-7;
+    color: $white-transparent-7;
+
+    &:hover, &:focus, &:active, &.active {
+      color: $white;
+      background-color: $white-transparent-7;
+      border-color: $white-transparent-7;
+    }
+  }
+
+  &.button-link {
+    color: $button-primary-color;
+    padding: 0;
+    transition: linear .2s all;
+
+    &:hover, &:active, &:focus, &.active {
+      color: $button-primary-color-active;
+    }
+  }
+
+  &.button-rounded {
+    border-radius: 200px;
+  }
+}

@@ -1,0 +1,19 @@
+$bg-color: #141516;
+
+$white: #ffffff;
+$white-transparent-05: rgba(255, 255, 255, 0.05);
+$white-transparent-1: rgba(255, 255, 255, 0.1);
+$white-transparent-2: rgba(255, 255, 255, 0.2);
+$white-transparent-25: rgba(255, 255, 255, 0.25);
+$white-transparent-5: rgba(255, 255, 255, 0.5);
+$white-transparent-7: rgba(255, 255, 255, 0.7);
+
+$black: rgba(0, 0, 0, 1);
+$black-light: $bg-color;
+
+$button-primary-color: rgba(92, 156, 245, 1);
+$button-primary-color-active: rgba(47, 126, 236, 1);
+
+$blue-dark: rgba(79, 111, 144, 1);
+
+$verified-color: $button-primary-color;
