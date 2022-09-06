@@ -26,7 +26,6 @@ import kiba177 from './assets/kiba177.jpeg';
 import hape27 from './assets/hape27.png';
 import metav3rse from './assets/metav3rse.jpeg';
 import handEmoji from './assets/hand-emoji.svg';
-import logo from './logo.svg';
 
 function App() {
   return (
